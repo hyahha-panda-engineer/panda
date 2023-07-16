@@ -74,10 +74,10 @@
   const { name } = useDisplay()
   const card_width = computed(()=>{
     switch (name.value) {
-          case 'xs': return "50%"
-          case 'sm': return "50%"
-          case 'md': return "50%"
-          case 'lg': return "50%"
+          case 'xs': return "100%"
+          case 'sm': return "100%"
+          case 'md': return "100%"
+          case 'lg': return "100%"
           case 'xl': return "30%"
           case 'xxl': return "30%"
         }
