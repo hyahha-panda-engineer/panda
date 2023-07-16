@@ -1,7 +1,6 @@
 <template>
     <v-menu
     location="left"
-    open-on-hover
     open-on-click>
         <template v-slot:activator="{ props }">
             <v-btn

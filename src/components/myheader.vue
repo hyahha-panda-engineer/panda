@@ -5,7 +5,7 @@
         <v-spacer ></v-spacer>
         <v-btn size="x-large" icon="mdi-home-outline" @click="to_home" ></v-btn>
         <v-btn size="x-large" icon="mdi-twitter" href="https://twitter.com/kabunushi0601" target="_blank" ></v-btn>
-        <v-btn @mouseenter="is_nav.is_nav=true" @click="is_nav.set_val(!is_nav.is_nav)" size="x-large"><v-icon> {{ is_nav.is_nav ? "mdi-dots-horizontal-circle":"mdi-dots-horizontal-circle-outline" }} </v-icon></v-btn>
+        <v-btn  @click="is_nav.set_val(!is_nav.is_nav)" size="x-large"><v-icon> {{ is_nav.is_nav ? "mdi-dots-horizontal-circle":"mdi-dots-horizontal-circle-outline" }} </v-icon></v-btn>
     </v-app-bar>
 </template>
 

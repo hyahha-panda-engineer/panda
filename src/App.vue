@@ -68,7 +68,7 @@
   import myheader from "./components/myheader.vue"
   import mynav from "./components/mynav.vue"
   import { useTipsStore } from '@/store/tips';
-  import { computed } from 'vue';
+  import { computed,onMounted } from 'vue';
   import { useDisplay } from 'vuetify'
   const tips = useTipsStore()
   const { name } = useDisplay()
@@ -83,5 +83,8 @@
         }
   })
 
+  onMounted(async() => {
+    await tips.fetch_items()
+  })
 
 </script>
