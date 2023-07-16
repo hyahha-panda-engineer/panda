@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 import {ref} from "vue"
 import axios from 'axios'
 
-const _SETTING_JSON_PATH = "/github.io/setting.json"
+const _SETTING_JSON_PATH = "/panda/setting.json"
 
 export const useTipsStore = defineStore('tips', ()=>{
   const items = ref([])

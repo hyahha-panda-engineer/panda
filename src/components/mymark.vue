@@ -42,7 +42,7 @@
   </script>
   
   <script setup>
-    const rootdir = "/github.io/"
+    const rootdir = "/panda/"
     const props = defineProps({
       mdfilename: String,
     });

@@ -8,7 +8,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/github.io',
+  base: '/panda',
   build: {
     outDir: './docs',
     publicDir: './public',

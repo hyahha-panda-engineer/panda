@@ -1,6 +1,6 @@
 # プロローグ
 
-<img src="/github.io/markdownfile/etc/prologue/prologue.jpg" width="20%">
+<img src="/panda/markdownfile/etc/prologue/prologue.jpg" width="20%">
 
 ## ことのはじめ
 
