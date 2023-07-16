@@ -17,9 +17,6 @@
   const tips = useTipsStore()
   const prog_item = ref({})
  
-
-  
-
   onMounted(async() => {
     await tips.fetch_items()
     prog_item.value = tips.get_category_items("prologue")[0]

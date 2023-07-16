@@ -68,10 +68,9 @@
   import myheader from "./components/myheader.vue"
   import mynav from "./components/mynav.vue"
   import { useTipsStore } from '@/store/tips';
-  import { onMounted,ref,computed } from 'vue';
+  import { computed } from 'vue';
   import { useDisplay } from 'vuetify'
   const tips = useTipsStore()
-  const prog_item = ref({})
   const { name } = useDisplay()
   const card_width = computed(()=>{
     switch (name.value) {
@@ -82,11 +81,6 @@
           case 'xl': return "30%"
           case 'xxl': return "30%"
         }
-  })
-
-  onMounted(async() => {
-    await tips.fetch_items()
-    prog_item.value = tips.get_category_items("prologue")[0]
   })
 
 
