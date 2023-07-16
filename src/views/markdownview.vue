@@ -1,9 +1,11 @@
 <template>
     <v-container >
-        <v-card class="mx-auto" width="70%">
-            <p class="date_view">作成日:{{ create_at }} <br /> 更新日:{{ last_modify }} </p>
-            <mymark :mdfilename="mdfile" />
-        </v-card>
+        <v-row>
+            <v-card class="mx-auto" width="70%">
+                <p class="date_view">作成日:{{ create_at }} <br /> 更新日:{{ last_modify }} </p>
+                <mymark :mdfilename="mdfile" />
+            </v-card>
+        </v-row>
     </v-container>
 </template>
 
