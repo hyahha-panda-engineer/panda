@@ -7,8 +7,8 @@ const _SETTING_JSON_PATH = "/panda/setting.json"
 
 export const useTipsStore = defineStore('tips', ()=>{
   const items = ref([])
-  const fetch_items = ()=>{
-    axios(_SETTING_JSON_PATH)
+  const fetch_items = async ()=>{
+    await axios(_SETTING_JSON_PATH)
     .then((res)=>{
       items.value = res.data
     })
