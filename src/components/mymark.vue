@@ -87,7 +87,7 @@
     @import "prismjs/themes/prism-okaidia.css";
     @import "github-markdown-css/github-markdown-dark.css";
 
-    .markdown-body  {
+    /* .markdown-body  {
       font-size: 1.5rem;
     }
 
@@ -96,7 +96,7 @@
     }
     .markdown-body h2 {
       font-size: 2rem;
-    }
+    } */
 
 
   </style>
