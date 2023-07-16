@@ -1,16 +1,31 @@
 // Utilities
 import { defineStore } from 'pinia'
 import {ref} from "vue"
+import axios from 'axios'
+
+const _SETTING_JSON_PATH = "/github.io/setting.json"
 
 export const useTipsStore = defineStore('tips', ()=>{
-  const items = ref([{"title":"aa","subtitle":"b","category":"vue"},
-                    {"title":"cc","subtitle":"dd","category":"python"},
-                    {"title":"cc","subtitle":"dd","category":"python"},
-                    {"title":"cc","subtitle":"dd","category":"python"},
-                    {"title":"cc","subtitle":"dd","category":"python"},
-                    {"title":"cc","subtitle":"dd","category":"python"},
-                    {"title":"cc","subtitle":"dd","category":"python"}])
+  const items = ref([])
+  const fetch_items = ()=>{
+    axios(_SETTING_JSON_PATH)
+    .then((res)=>{
+      items.value = res.data
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+    
+  }
+  const get_category_items = (category)=>{
+    return items.value.filter((item)=>{
+      return item.category === category
+    })
+  }
+
   return{
-    items
+    items,
+    fetch_items,
+    get_category_items
   }
 })

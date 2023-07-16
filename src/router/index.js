@@ -1,12 +1,18 @@
 // Composables
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Homeview from "../views/Home.vue"
+import markdownview from "../views/markdownview.vue"
 
 const routes = [
   {
     path: '/',
     name: "home",
     component: Homeview
+  },
+  {
+    path: '/markdownview/:mdfile?/:create_at?/:last_modify?',
+    name: 'markdownview',
+    component:markdownview
   },
 ]
 

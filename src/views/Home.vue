@@ -4,8 +4,7 @@
       <v-card>
         <v-card-text>
           <p class="text-h4">
-            何を作るか全く決まってない！！ <br />
-            とりあえず、記事を書いて更新順に10個ぐらいカードで並べる
+            新着記事
           </p> 
           
         </v-card-text>
@@ -29,13 +28,18 @@
           <v-card
           color="#8D4004"
           theme="dark"
-          height="200"
-          width="100"
+          height="300"
+          width="300"
           class="ma-4"
+          :to="{ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} }"
           >
             <v-card-title>
               {{item.title}}
             </v-card-title>
+            <v-img :src="item.rootdir+item.imagepath" max-height="150px" cover></v-img>
+            <v-card-text>
+              {{ item.summary }}
+            </v-card-text>
           </v-card>
           </v-slide-group-item>
         </v-slide-group>
@@ -48,7 +52,12 @@
 
 <script setup>
   import { useTipsStore } from '@/store/tips';
+  import { onMounted } from 'vue';
 
   const tips = useTipsStore()
+
+  onMounted(() => {
+    tips.fetch_items()
+  })
 
 </script>
