@@ -27,6 +27,7 @@
 <script setup>
     import { useTipsStore } from '@/store/tips';
     import { useRouter } from 'vue-router';
+    import { inject } from 'vue';
 
     // import { defineProps } from 'vue';
     
@@ -37,11 +38,8 @@
         category: String,
     })
     const tips = useTipsStore()
-
-    const to_tips = (item)=>{
-        router.push({ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} })
-        window.scroll({top: 350, behavior: 'smooth'});
-    }
+    const to_tips = inject('to_tips')
+    
 
     
 

@@ -4,21 +4,30 @@
       v-model="is_nav.is_nav"
       location="right"
       >
-        <mynavmenu
-        category="prologue"
-        title="プロローグ">
-
-        </mynavmenu>
-    
+        <v-btn
+            color="#8D4004"
+            width="100%"
+            @click="to_tips(prog_item)"
+            >
+            <span style="color: bisque;">プロローグ</span>
+        </v-btn>
+        
       </v-navigation-drawer>
 </template>
 
 <script setup>
     import { useNavStore } from '@/store/nav';
-    import { useTipsStore } from '@/store/tips';
     import mynavmenu from '@/components/mynavmenu.vue'
+    import { useTipsStore } from '@/store/tips';
+    import { inject,computed } from 'vue';
 
     const is_nav = useNavStore()
     const tips = useTipsStore()
+    const to_tips = inject('to_tips')
+
+    const prog_item = computed(()=>{
+        return tips.get_category_items('prologue')[0]
+    })
+
 
 </script>

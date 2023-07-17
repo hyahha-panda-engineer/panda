@@ -13,7 +13,7 @@
       <v-row>
         <router-view />
       </v-row>
-      <v-row justify="center" class="mb-5">
+      <v-row justify="center" class="mb-5 mt-10">
         <v-card>
           <v-card-text>
             <p class="text-h4">
@@ -92,7 +92,7 @@
   import myheader from "./components/myheader.vue"
   import mynav from "./components/mynav.vue"
   import { useTipsStore } from '@/store/tips';
-  import { computed,onMounted } from 'vue';
+  import { computed,onMounted,provide } from 'vue';
   import { useDisplay } from 'vuetify'
   import { useRouter } from "vue-router";
 
@@ -137,5 +137,7 @@
   onMounted(async() => {
     await tips.fetch_items()
   })
+
+  provide('to_tips',to_tips)
 
 </script>
