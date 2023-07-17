@@ -16,7 +16,7 @@
             v-for="(item, index) in tips.get_category_items(props.category)"
             :key="index"
             :value="index"
-            :to="{ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} }"                >
+            @click="to_tips(item)">
             <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
         </v-list>
@@ -26,13 +26,23 @@
 
 <script setup>
     import { useTipsStore } from '@/store/tips';
+    import { useRouter } from 'vue-router';
+
     // import { defineProps } from 'vue';
     
+    const router = useRouter()
+
     const props = defineProps({
         title: String,
         category: String,
     })
     const tips = useTipsStore()
+
+    const to_tips = (item)=>{
+        router.push({ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} })
+        window.scroll({top: 350, behavior: 'smooth'});
+    }
+
     
 
 </script>

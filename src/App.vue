@@ -45,7 +45,7 @@
               height="300"
               :width="card_width"
               class="ma-4"
-              :to="{ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} }"
+              @click="to_tips(item)"
               >
                 <v-card-title>
                   {{item.title}}
@@ -70,6 +70,9 @@
   import { useTipsStore } from '@/store/tips';
   import { computed,onMounted } from 'vue';
   import { useDisplay } from 'vuetify'
+  import { useRouter } from "vue-router";
+
+
   const tips = useTipsStore()
   const { name } = useDisplay()
   const card_width = computed(()=>{
@@ -82,6 +85,12 @@
           case 'xxl': return "30%"
         }
   })
+
+  const router = useRouter()
+  const to_tips = (item)=>{
+        router.push({ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} })
+        window.scroll({top: 350, behavior: 'smooth'});
+    }
 
   onMounted(async() => {
     await tips.fetch_items()

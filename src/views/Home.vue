@@ -13,6 +13,7 @@
   import { useTipsStore } from '@/store/tips';
   import { onMounted,ref,computed } from 'vue';
   import mymark from '@/components/mymark.vue';
+  
 
   const tips = useTipsStore()
   const prog_item = computed(()=>tips.get_category_items("prologue")[0]) 
