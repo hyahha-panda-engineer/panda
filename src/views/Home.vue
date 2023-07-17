@@ -11,13 +11,17 @@
 
 <script setup>
   import { useTipsStore } from '@/store/tips';
-  import { onMounted,ref,computed } from 'vue';
+  import { onMounted,ref,computed,watch } from 'vue';
   import mymark from '@/components/mymark.vue';
-  
+  const prog_item = ref("")
 
   const tips = useTipsStore()
-  const prog_item = computed(()=>tips.get_category_items("prologue")[0]) 
   onMounted(async() => {
+    prog_item.value = tips.get_category_items("prologue")[0]
   })
+
+  watch(()=>tips.get_category_items("prologue")[0],(newVal,oldVal)=>{
+    prog_item.value = newVal
+  },{deep:true})
 
 </script>
