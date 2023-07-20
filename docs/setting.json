@@ -7,7 +7,17 @@
         "summary": "ことのはじめ",
         "imagepath": "prologue.jpg",
         "create_at": "2023-07-16",
-        "last_modify": "2023-07-17"
+        "last_modify": "2023-07-20"
+    },
+    {
+        "title": "環境構築",
+        "category": "vue",
+        "rootdir": "markdownfile/vue/setup/",
+        "mdfile": "setup.md",
+        "summary": "vueのセットアップ",
+        "imagepath": "setup.jpg",
+        "create_at": "2023-07-20",
+        "last_modify": "2023-07-20"
     },
     {
         "title": "TEST1",
