@@ -11,6 +11,8 @@
             >
             <span style="color: bisque;">プロローグ</span>
         </v-btn>
+
+        <mynavmenu title="vue" category="vue"></mynavmenu>
         
       </v-navigation-drawer>
 </template>

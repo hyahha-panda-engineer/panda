@@ -24,7 +24,7 @@
         </v-card>
       </v-row>
       <v-row v-if="is_mobile"  justify="center">
-        <template v-for="item in tips.items" >
+        <template v-for="item in tips.get_new_items" >
           <v-col cols="6" class="d-flex align-center">
             <v-card
               color="#8D4004"
@@ -60,7 +60,7 @@
               show-arrows
             >
               <v-slide-group-item
-                v-for="item in tips.items"
+                v-for="item in tips.get_new_items"
                 :key="item.title"
               >
               <v-card
@@ -130,8 +130,9 @@
     }else
     {
       scroll_top = 350
-    }
+    }  
     window.scroll({top: scroll_top, behavior: 'smooth'});
+    
   }
 
   onMounted(async() => {

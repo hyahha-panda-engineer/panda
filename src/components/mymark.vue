@@ -1,7 +1,7 @@
 <template>
-    <div class="content">
-      <div class="line-numbers language-markup markdown-body" v-html="mdToHtml"></div>
-    </div>
+  <div class="content">
+    <div class="line-numbers language-markup markdown-body" v-html="mdToHtml"></div>
+  </div>
   </template>
     
   <script>
@@ -48,6 +48,7 @@
     });
     const mdfilepath =ref(""); 
     const markDown = ref("");
+
   
     // get markdown data
     const getMarkdownData = async () => {
@@ -86,17 +87,6 @@
   <style>
     @import "prismjs/themes/prism-okaidia.css";
     @import "github-markdown-css/github-markdown-dark.css";
-
-    /* .markdown-body  {
-      font-size: 1.5rem;
-    }
-
-    .markdown-body h1 {
-      font-size: 2.5rem;
-    }
-    .markdown-body h2 {
-      font-size: 2rem;
-    } */
 
 
   </style>
