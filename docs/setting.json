@@ -20,6 +20,16 @@
         "last_modify": "2023-07-21"
     },
     {
+        "title": "自分のページにしていく①",
+        "category": "vue",
+        "rootdir": "markdownfile/vue/mypage_1/",
+        "mdfile": "mypage.md",
+        "summary": "まずは準備",
+        "imagepath": "mypage.jpg",
+        "create_at": "2023-07-21",
+        "last_modify": "2023-07-21"
+    },
+    {
         "title": "TEST1",
         "category": "vue",
         "rootdir": "markdownfile/vue/test1/",
