@@ -113,7 +113,7 @@ npm create vuetify
     Base (Vuetify, VueRouter)
     Essentials (Vuetify, VueRouter, Pinia)
 ❯   Custom (Choose your features)
-? Use TypeScript? › No / Yes #必要であればtypescriptにする。今回は普通のjsで作る
+? Use TypeScript? › No / Yes #今回はjsでつくる。お前らにはまだ早い。
 ? Use Vue Router? › No / Yes #SPAには必須なのでいれる
 ? Use Pinia? › No / Yes #状態管理ツール。便利なので入れる
 ? Use ESLint? › No / Yes #Linter。無いときついのでいれる
@@ -124,3 +124,17 @@ Would you like to install dependencies with yarn, npm, or pnpm? › - Use arrow-
     none
 
 ```
+
+### ついにdeploy
+
+ついにwebエンジニアとしての第一歩を踏み出そう！
+
+```bash
+npm run dev
+```
+
+このコマンドあとブラウザで下記にアクセスしてみる  
+http://localhost:3000
+
+おめでとう！これが君のページだ🐼  
+あとはこれをベースにどんどん作っていこう🐼
