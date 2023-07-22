@@ -11,25 +11,32 @@
 
 <script setup>
 import mymark from '@/components/mymark.vue';
+import { useTipsStore } from '@/store/tips';
 import { ref,watch } from 'vue';
 import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+const tips = useTipsStore();
 const route = useRoute();
 const mdfile = ref(null)
 const create_at = ref(null)
 const last_modify = ref(null)
 
 
+const set_props = ()=>{
+    const item = tips.get_items_from_id(route.params.id)[0]
+    console.log(item.mdfile)
+    mdfile.value = item.rootdir + item.mdfile
+    create_at.value = item.create_at
+    last_modify.value = item.last_modify
+}
+
 onMounted(()=>{
-    mdfile.value=route.params.mdfile
-    create_at.value = route.params.create_at
-    last_modify.value = route.params.last_modify
+    console.log(route.params.id)
+    set_props()
 })
-watch(()=>route.params.mdfile,(newVal,oldVal)=>{
-    mdfile.value=route.params.mdfile
-    create_at.value = route.params.create_at
-    last_modify.value = route.params.last_modify
+watch(()=>route.params.id,(newVal,oldVal)=>{
+    set_props()
   },{deep:true})
 
 </script>

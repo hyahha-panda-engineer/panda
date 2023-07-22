@@ -2,6 +2,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Homeview from "../views/Home.vue"
 import markdownview from "../views/markdownview.vue"
+import testview from "../views/testview.vue"
 
 const routes = [
   {
@@ -10,10 +11,15 @@ const routes = [
     component: Homeview
   },
   {
-    path: '/markdownview/:mdfile?/:create_at?/:last_modify?',
+    path: '/markdownview/:id',
     name: 'markdownview',
     component:markdownview
   },
+  {
+    path: '/testview/:id',
+    name: 'testview',
+    component:testview
+  }
 ]
 
 const router = createRouter({

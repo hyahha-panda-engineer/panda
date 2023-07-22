@@ -10,6 +10,6 @@
 
 <script setup>
   import mymark from '@/components/mymark.vue';
-  
+
 
 </script>

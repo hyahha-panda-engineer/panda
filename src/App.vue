@@ -124,7 +124,7 @@
   const router = useRouter()
   const to_tips = (item)=>{
     let scroll_top = 0
-    router.push({ name: 'markdownview', params: {'mdfile':item.rootdir + item.mdfile,'create_at':item.create_at,'last_modify':item.last_modify} })
+    router.push({ name: 'markdownview', params: {'id':item.id} })
     if(is_mobile.value){
       scroll_top = 0
     }else

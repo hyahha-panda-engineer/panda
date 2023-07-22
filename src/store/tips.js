@@ -1,4 +1,3 @@
-// Utilities
 import { defineStore } from 'pinia'
 import {ref,computed} from "vue"
 import axios from 'axios'
@@ -23,6 +22,12 @@ export const useTipsStore = defineStore('tips', ()=>{
     })
   }
 
+  const get_items_from_id = (id)=>{
+    return items.value.filter((item)=>{
+      return item.id === id
+    })
+  }
+
   const get_new_items =computed(()=>{
     const temp_item = items.value.slice()
     temp_item.sort((a,b)=>{
@@ -38,6 +43,7 @@ export const useTipsStore = defineStore('tips', ()=>{
     items,
     fetch_items,
     get_category_items,
+    get_items_from_id,
     get_new_items
   }
 })
