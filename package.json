@@ -2,8 +2,8 @@
   "name": "panda",
   "version": "0.0.0",
   "scripts": {
-    "dev": "python3 set_lastmodify.py && vite",
-    "build": "python3 set_lastmodify.py && vite build",
+    "dev": "python3 set_lastmodify.py && eslint src/**/*.{js,vue} src/*.{js,vue} && vite",
+    "build": "python3 set_lastmodify.py && eslint src/**/*.{js,vue} src/*.{js,vue} && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },

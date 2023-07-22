@@ -16,7 +16,6 @@
 
 <script setup>
     import { useNavStore } from '@/store/nav';
-    import { useRouter } from 'vue-router';
     const is_nav = useNavStore()
     
     const router = useRouter()

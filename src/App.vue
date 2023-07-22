@@ -24,8 +24,8 @@
         </v-card>
       </v-row>
       <v-row v-if="is_mobile"  justify="center">
-        <template v-for="item in tips.get_new_items" >
-          <v-col cols="6" class="d-flex align-center">
+        <template v-for="item in tips.get_new_items" :key="item.title" >
+          <v-col cols="12" class="d-flex align-center">
             <v-card
               color="#8D4004"
               theme="dark"
@@ -108,6 +108,7 @@
           case 'xl': return "30%"
           case 'xxl': return "30%"
         }
+      return "100%"
   })
 
   const is_mobile = computed(()=>{
@@ -119,6 +120,7 @@
           case 'xl': return false
           case 'xxl': return false
         }
+      return false
   })
 
   const router = useRouter()
