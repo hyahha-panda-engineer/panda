@@ -120,7 +120,7 @@
           case 'xl': return false
           case 'xxl': return false
         }
-      return false
+    return false
   })
 
   const router = useRouter()

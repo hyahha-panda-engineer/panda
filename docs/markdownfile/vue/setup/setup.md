@@ -11,7 +11,7 @@
 - vue.js(vite) + vuetify
 
 環境構築？そんなの常識だろjk！！っていう人は巣に帰ってよし！  
-OSはwindowsを想定しているがWSLより先はUbuntuの挙動なのでWSLを飛ばしてもらえればいい
+OSはwindowsを想定しているがWSLより先はUbuntuの挙動なのでubuntu環境でやっている人はWSLを飛ばしてもらえればいい
 
 <br />
 

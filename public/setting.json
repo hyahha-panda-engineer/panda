@@ -19,7 +19,7 @@
         "summary": "vueのセットアップ",
         "imagepath": "setup.jpg",
         "create_at": "2023-07-20",
-        "last_modify": "2023-07-21"
+        "last_modify": "2023-07-24"
     },
     {
         "id": "vue-2",
@@ -30,7 +30,18 @@
         "summary": "まずは準備",
         "imagepath": "mypage.jpg",
         "create_at": "2023-07-21",
-        "last_modify": "2023-07-22"
+        "last_modify": "2023-07-24"
+    },
+    {
+        "id": "vue-3",
+        "title": "自分のページにしていく②",
+        "category": "vue",
+        "rootdir": "markdownfile/vue/mypage_2/",
+        "mdfile": "mypage_2.md",
+        "summary": "変数を表示してみる",
+        "imagepath": "mypage_2.jpg",
+        "create_at": "2023-07-24",
+        "last_modify": "2023-07-27"
     },
     {
         "id": "debug-1",
