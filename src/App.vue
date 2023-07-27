@@ -105,8 +105,8 @@
           case 'sm': return "100%"
           case 'md': return "100%"
           case 'lg': return "100%"
-          case 'xl': return "30%"
-          case 'xxl': return "30%"
+          case 'xl': return "60%"
+          case 'xxl': return "60%"
         }
       return "100%"
   })
