@@ -101,20 +101,20 @@
   const { name } = useDisplay()
   const card_width = computed(()=>{
     switch (name.value) {
-          case 'xs': return "100%"
-          case 'sm': return "100%"
-          case 'md': return "100%"
-          case 'lg': return "100%"
-          case 'xl': return "60%"
-          case 'xxl': return "60%"
+          case 'xs': return "400"
+          case 'sm': return "400"
+          case 'md': return "400"
+          case 'lg': return "400"
+          case 'xl': return "400"
+          case 'xxl': return "600"
         }
-      return "100%"
+      return "400"
   })
 
   const is_mobile = computed(()=>{
     switch (name.value) {
-          case 'xs': return true
-          case 'sm': return true
+          case 'xs': return false
+          case 'sm': return false
           case 'md': return false
           case 'lg': return false
           case 'xl': return false
