@@ -35,7 +35,7 @@ vuejsの場合htmlの所に二重波カッコで囲うとjavascript側の変数�
 今回の場合`<script>`内で定義したcountを`<template>`内の{{ count }}で表示している。  
 これで下図のように汚物を消毒できているはずだ
 
-<img src="/panda/markdownfile/vue/mypage_2/image1.png" width="20%">
+<img src="/panda/markdownfile/vue/mypage_2/image1.png" width="50%">
 
 
 ## 変数の変更と反映
@@ -64,7 +64,7 @@ vuejsの場合htmlの所に二重波カッコで囲うとjavascript側の変数�
 
 </details>
 
-<img src="/panda/markdownfile/vue/mypage_2/image2.png" width="20%">
+<img src="/panda/markdownfile/vue/mypage_2/image2.png" width="50%">
 
 このコードで汚物を消毒ボタンが追加されたと思う。  
 v-btn内の@clickでボタンが押された時の挙動を設定しており、今回の場合はcountを1増やしている。  
